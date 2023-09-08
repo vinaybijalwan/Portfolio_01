@@ -1,1 +1,182 @@
-<h1>Hello Website</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="navbarsection">
+        <div class="navItem">
+            <a href="#">Home</a>
+            <a href="#">Blog</a>
+            <a href="#">Tutorial</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+
+    </section>
+
+
+    <section class="profile">
+        
+        <div class="profile-pic">
+            <img src="d2.png" width="200" height="200" class = "center"/>
+        </div>
+
+        <div class="intro">
+            <h1>Vinay Prasad, Bijalwan</h1>
+            <span id="element"></span>
+        </div>
+
+        
+    </section>
+
+    <section class="mywork">
+        <div class="work_heading">
+            <h1>My Work</h1>
+            
+        </div>
+        <div class="work_detail">
+            <div class="firstWork">
+                <h3>Employee Managment System</h3>
+                <div class="work-pic">
+                    <a href="#">
+                        <img src="my_first_work.jpeg" width="200" height="200" class = "center"/>
+                    </a>
+                </div>
+                
+            </div>
+            <div class="secondWork">
+                <h3>Patient Managment System</h3>
+                <div class="work-pic">
+                    <a href="#">
+                        <img src="patient.jpg" width="200" height="200" class = "center"/>
+                    </a>
+                </div>
+                
+            </div>
+            <div class="thirdtWork">
+                <h3>School Managment System</h3>
+                <div class="work-pic">
+                    <a href="#">
+                     <img src="school.png" width="200" height="200" class = "center"/> 
+                     </a>
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    </section>
+
+    
+    </section class="about-me">
+        <h1 class="about">About Me</h1>
+        <div class="aboutmeIntro">
+            <p>My self Vinay Prasd, Currenty i working in Patanjali Haridwar.</p>
+            <p>My Work profile as Data Analyst, working on EMR (Health Sector) Data </p>
+            <p>I'm analysis data using R - Data.Table, Python, Excel</p>
+            <p>My Side by Work is Web Developer, Give minimal enterprise, persnal and advance level Website </p>
+            <p>For Web Development Technology used - Python Django, HTML, CSS,JS</p>
+            <p>For OS Level working on Linux OS-Debain, Kali Linux, Slax, Gentoo Linux, Ubuntu</p>
+            <p>Fontend FrameWork - React JS</p>
+        </div>
+    <section>
+    
+
+        <section class="dataWork">
+         <div class="rdata">
+            <h1>Data Analysis with R </h1>
+            <div class="data-pic">
+                <a href="#">
+                    <img src="r-datatable.png" width="200" height="200" class = "center"/>
+                </a>
+            </div>
+         </div>
+         <div class="pythondata">
+            <h1>Data Analysis with Python</h1>
+            <div class="data-pic">
+                <a href="#">
+                    <img src="python-data.png" width="200" height="200" class = "center"/>
+                </a>
+            </div>
+
+         </div>
+         <div class="exceldata">
+            <h1>Data Analysis with Excel </h1>
+            <div class="data-pic">
+                <a href="#">
+                    <img src="excel-data.png" width="200" height="200" class = "center"/>
+                </a>
+            </div>
+         </div>
+
+         <br>
+
+        </section>
+        <div class="feedback-form">
+            <h2>Feedback Form</h2>
+            <form id="feedbackForm" action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+    
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    
+        <section>
+
+        </section>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+  <script>
+        //----------------------------------------------------------------//
+        var typed = new Typed('#element', {
+      strings: ['<i>Web Developer,</i> Data Analyst.','&amp; Coder.'],
+      typeSpeed: 50,
+    });
+    //-------------------------------------------------------------------//
+
+
+    // -----------------------------------------------------------------------//
+
+    // You can add JavaScript here for client-side validation and form submission
+    document.getElementById("feedbackForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            // You can add validation logic here
+
+            // Example: Check if the email is valid (simplified validation)
+            var emailInput = document.getElementById("email").value;
+            if (!validateEmail(emailInput)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            // If validation passes, you can submit the form here
+            // Replace the "#" in the action attribute with the URL to which you want to send the form data.
+            this.submit();
+        });
+
+        function validateEmail(email) {
+            var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+
+        //-----------------------------------------------------------------------------//
+  </script>
+</body>
+</html>
